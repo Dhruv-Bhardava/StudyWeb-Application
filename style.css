@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+
+:root {
+  --primary-color: #6366f1;
+  --accent-color: #3f83f8;
+  --text-color: #333;
+  --link-color: #2563eb;
+  --background-color: #f0f0f0;
+  --gray: #808080;
+  --dark-gray: #555;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--background-color);
+}
+
+/* ======================================= NAVBAR CODE START HERE =============================================================== */
+
+.header {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.header .header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.logo-container img {
+  width: 1.7rem;
+}
+
+.logo-container .logo-text {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  font-weight: 800;
+}
+
+.header-container .nav-links {
+  display: none;
+  list-style: none;
+  gap: 1.3rem;
+}
+
+@media screen and (min-width: 768px) {
+  .header-container .nav-links {
+    display: flex;
+  }
+
+  .header-container .contact-btn {
+    display: block;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+}
+
+.header-container .nav-links a {
+  color: var(--dark-gray);
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.header-container .nav-links a:hover {
+  color: var(--link-color);
+}
+
+.contact-btn {
+  display: none;
+  background-color: var(--primary-color);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.header-container .contact-btn:hover {
+  background-color: #5254f8;
+}
+
+.contact-btn a {
+  color: #fff;
+  font-weight: 600;
+}
+
+.menu-btn img {
+  width: 2rem;
+  cursor: pointer;
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-btn img {
+    display: block;
+  }
+
+  .header .header-container {
+    padding: 0.9rem;
+  }
+}
+
+/* ======================================= NAVBAR CODE END HERE =============================================================== */
