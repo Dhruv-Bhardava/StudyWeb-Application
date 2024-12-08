@@ -12,9 +12,10 @@
   --accent-color: #3f83f8;
   --text-color: #333;
   --link-color: #2563eb;
-  --background-color: #f0f0f0;
+  --background-color: #fff;
   --gray: #808080;
   --dark-gray: #555;
+  --light-gray: #f0f0f0;
 }
 
 body {
@@ -117,3 +118,185 @@ body {
 }
 
 /* ======================================= NAVBAR CODE END HERE =============================================================== */
+
+/* ======================================= HERO SECTION CODE START HERE =============================================================== */
+
+.main-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all 0.5s ease;
+}
+
+.left-section {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: all 0.5s ease;
+  animation: slideFromLeft 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.left-section .section-label {
+  font-size: 1.125rem;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.left-section .section-title {
+  font-size: 2.235rem;
+  font-weight: 700;
+  color: var(--text-color);
+}
+
+.left-section .section-desc {
+  font-size: 1rem;
+  color: var(--gray);
+  line-height: 1.3rem;
+}
+
+.left-section .left-section-buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+.start-btn,
+.tour-btn {
+  background-color: var(--primary-color);
+  padding: 0.6rem 1rem;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #fff;
+  font-weight: 600;
+}
+
+.start-btn:hover {
+  background-color: #5254f8;
+}
+
+.tour-btn {
+  background-color: var(--gray);
+}
+
+.tour-btn:hover {
+  background-color: var(--dark-gray);
+}
+
+.right-section {
+  width: 45%;
+  transition: all 0.5s ease;
+}
+.image-container img {
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 1.125rem;
+}
+
+@media screen and (max-width: 768px) {
+  .main-section {
+    flex-direction: column-reverse;
+    padding: 0.9rem;
+    gap: 2rem;
+  }
+
+  .right-section {
+    width: 60%;
+    align-items: center;
+  }
+
+  .left-section {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+  }
+
+  .left-section .section-title {
+    font-size: 2rem;
+  }
+
+  .left-section .section-desc {
+    font-size: 0.9rem;
+  }
+}
+
+/* ======================================= HERO SECTION CODE END HERE =============================================================== */
+
+/* ======================================= COMPANY SECTION CODE START HERE =============================================================== */
+
+.company-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0.9rem;
+  margin-top: 1.5rem;
+  animation: slideFromLeft 1s ease forwards;
+  transition: all 0.5s ease;
+}
+
+.company-container h2 {
+  color: var(--text-color);
+  font-size: 1.5rem;
+  transition: all 0.5s ease;
+}
+
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: var(--light-gray);
+  gap: 2rem;
+  padding: 1.2rem;
+  border-radius: 1rem;
+  margin-top: 1rem;
+  transition: all 0.5s ease;
+}
+
+.company-grid .company-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.company-img {
+  height: 1.5rem;
+}
+
+.company-logo span {
+  color: var(--gray);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 680px) {
+  .company-grid {
+    grid-template-columns: repeat(4, 1fr);
+    transition: all 0.5s ease;
+  }
+
+  .company-container h2 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    transition: all 0.5s ease;
+  }
+}
+
+/* ======================================= COMPANY SECTION CODE END HERE =============================================================== */
